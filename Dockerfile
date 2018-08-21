@@ -1,16 +1,12 @@
-FROM alpine
+FROM ubuntu:18.04
 
 LABEL maintainer="Shunsuke Miyoshi <swfft814@gmail.com>"
 
-# Install kubectl
-ENV KUBE_LATEST_VERSION="v1.11.2"
+RUN apt-get update -y && apt-get install -y \
+  curl
 
-RUN apk add --update ca-certificates \
- && apk add --update -t deps curl \
- && curl -L https://storage.googleapis.com/kubernetes-release/release/${KUBE_LATEST_VERSION}/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl \
- && chmod +x /usr/local/bin/kubectl \
- && apk del --purge deps \
- && rm /var/cache/apk/*
+# Install kubectl
+RUN curl -L https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl && chmod +x /usr/local/bin/kubectl
 
 # Install istioctl
 ADD istioctl /usr/local/bin
