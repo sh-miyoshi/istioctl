@@ -15,6 +15,10 @@ kubectl apply -f <(istioctl kube-inject -f <resource.yaml>)
 make
 ```
 
+## Docker image tags and respective Dockerfile links
+- `1.0.0`, `latest`: [master/Dockerfile](https://github.com/sh-miyoshi/istioctl/blob/master/Dockerfile)
+- `ubuntu-base`: [ubuntu-base/Dockerfile](https://github.com/sh-miyoshi/istioctl/blob/ubuntu-base/Dockerfile)
+
 ## Run
 
 ``` text
