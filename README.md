@@ -17,9 +17,7 @@ make
 
 ## Docker image tags and respective Dockerfile links
 
-- `1.1.1`, `latest`: [master/Dockerfile](https://github.com/sh-miyoshi/istioctl/blob/master/Dockerfile)
-- `1.1.1`: [v1.1.1/Dockerfile](https://github.com/sh-miyoshi/istioctl/tree/v1.1.1)
-- `1.0.0`: [v1.0.0/Dockerfile](https://github.com/sh-miyoshi/istioctl/tree/v1.0.0)
+- `1.1.1`, `1.0.0`, `latest`: [master/Dockerfile](https://github.com/sh-miyoshi/istioctl/blob/master/Dockerfile)
 - `ubuntu-base`: [ubuntu-base/Dockerfile](https://github.com/sh-miyoshi/istioctl/blob/ubuntu-base/Dockerfile)
 
 ## Run
