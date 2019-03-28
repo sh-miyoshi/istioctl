@@ -7,7 +7,7 @@ else
   OSEXT="linux"
 fi
 
-ISTIO_VERSION="1.0.0"
+ISTIO_VERSION="1.1.0"
 
 NAME="istio-$ISTIO_VERSION"
 
